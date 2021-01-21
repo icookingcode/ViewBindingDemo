@@ -3,9 +3,13 @@ ViewBinding封装
 
 # 启用ViewBinding
 ```
-  buildFeatures {
-    viewBinding = true  //启用viewBinding 
-    dataBinding = false //禁用dataBinding
+  android{
+    ......
+    buildFeatures {
+      viewBinding = true  //启用viewBinding 
+      dataBinding = false //禁用dataBinding
+    }
+    ......
   }
 ```
 # 使用
