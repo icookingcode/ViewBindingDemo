@@ -6,8 +6,7 @@ ViewBinding封装
   android{
     ......
     buildFeatures {
-      viewBinding = true  //启用viewBinding 
-      dataBinding = false //禁用dataBinding
+        viewBinding = true  //启用viewBinding
     }
     ......
   }
@@ -83,8 +82,16 @@ ViewBinding封装
 ```
 # 防止反射方法被混淆
 -keepclassmembers class * implements androidx.viewbinding.ViewBinding {
-  public static ** inflate(...);
-  public static ** bind(***);
+  public static * inflate(android.view.LayoutInflater);
+  public static * inflate(android.view.LayoutInflater, android.view.ViewGroup, boolean);
+  public static * bind(android.view.View);
 }
 ```
 
+# 关于我  
+Name: Guchao  
+Email: happygc913@gmail.com / happygc@126.com  
+CSDN: [snow_lyGirl](https://blog.csdn.net/qq_31028313)  
+GitHub: [GuchaoGit](https://github.com/GuchaoGit?tab=repositories)  
+Gitee:[GuChaoGitee](https://gitee.com/guchaogitee/projects)  
+加入QQ群:128937635  

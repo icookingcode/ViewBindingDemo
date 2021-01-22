@@ -1,2 +1,3 @@
+include ':gviewbinding'
 include ':app'
 rootProject.name = "ViewBindingDemo"

@@ -1,6 +1,7 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
     id 'kotlin-android'
+    id 'com.github.panpf.bintray-publish'
 }
 
 android {
@@ -8,13 +9,12 @@ android {
     buildToolsVersion "29.0.3"
 
     defaultConfig {
-        applicationId "com.guc.viewbindingktx"
         minSdkVersion rootProject.buildConfig.minSdkVersion
         targetSdkVersion rootProject.buildConfig.targetSdkVersion
         versionCode rootProject.buildConfig.versionCode
         versionName rootProject.buildConfig.versionName
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -36,14 +36,22 @@ android {
 }
 
 dependencies {
+
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.core:core-ktx:1.3.2'
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.2.1'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    testImplementation 'junit:junit:4.13.1'
+    testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-    implementation project(path: ':gviewbinding')
+}
+
+publish {
+    userOrg = 'guchao'
+    repoName = 'maven'
+    groupId = 'com.guc.gviewbinding'
+    artifactId = 'gviewbinding'
+    publishVersion = '1.0.1'
+    desc = 'An easy way to use ViewBinding.'
+    website = 'https://github.com/icookingcode/ViewBindingDemo'
 }
