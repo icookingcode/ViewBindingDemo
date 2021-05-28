@@ -1,8 +1,9 @@
 plugins {
     id 'com.android.library'
     id 'kotlin-android'
-    id 'com.github.panpf.bintray-publish'
+    id 'com.github.dcendents.android-maven'
 }
+group='com.guc.gviewbinding'
 
 android {
     compileSdkVersion 30
@@ -46,12 +47,3 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 }
 
-publish {
-    userOrg = 'guchao'
-    repoName = 'maven'
-    groupId = 'com.guc.gviewbinding'
-    artifactId = 'gviewbinding'
-    publishVersion = '1.0.1'
-    desc = 'An easy way to use ViewBinding.'
-    website = 'https://github.com/icookingcode/ViewBindingDemo'
-}

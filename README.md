@@ -1,6 +1,8 @@
 # ViewBindingDemo
 ViewBinding封装
-
+# gradle引入
+```
+```
 # 启用ViewBinding
 ```
   android{
