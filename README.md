@@ -1,7 +1,19 @@
 # ViewBindingDemo
 ViewBinding封装
 # gradle引入
+## Add it in your root build.gradle at the end of repositories:
+To use this frmame,add this dependency to the build.gradle of the app:
 ```
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
+## Add the dependency
+```
+ implementation 'com.gitee.guclib:gviewbinding:1.0.0'
 ```
 # 启用ViewBinding
 ```
